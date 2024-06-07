@@ -121,6 +121,7 @@ main {
 }
 
 .carousel-content {
+    border: 5px solid #8C7C56;
     background-color: #EEE9E5;
     padding: 1rem;
     text-align: center;
