@@ -106,10 +106,10 @@ main {
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 350px;
     transform: translateY(-50%);
     z-index: 1;
-    color: #333;
+    color: #070707;
 }
 
 .carousel-button.left {
@@ -147,9 +147,12 @@ main {
 }
 
 .carousel-content img {
-    width: 100%;
     height: auto;
     margin-bottom: 1rem;
+}
+
+.carousel-content td {
+    width: 50%;
 }
 
 .learn-more {
