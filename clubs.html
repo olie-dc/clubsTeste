@@ -11,9 +11,16 @@
         <div class="logo">BookWorms©</div>
         <nav>
             <ul>
-                <li><a class="botao" href="#">HOME</a></li>
-                <li><a class="botao" href="#">EVENTOS</a></li>
-                <li><a class="botao" href="#">CLUBES</a></li>
+                <li><a class="botao" href="index.html">Home</a></li>
+                <li><a class="botao" href="news.html">Notícias</a></li>
+                <li class="dropdown">
+                    <a class="botao" href="javascript:void(0)" class="dropbtn">Clubes</a>
+                    <div class="dropdown-content">
+                        <a class="botao" href="fantasia.html">Fantasia | Ficção científica | Distopia</a>
+                        <a class="botao" href="acao.html">Ação | aventura</a>
+                        <a class="botao" href="romance.html">Romance</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -139,12 +146,45 @@
         <section class="categories feedback-spacing">
             <h1>Feedback</h1>
         </section>
-        <section class="feedback">
-            <form>
-                <textarea placeholder="Avalie nosso site e deixe sua sugestão..."></textarea>
-                <button type="submit">Submit</button>
+        <div class="feedback" style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 3px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <form id="feedbackForm" method="post">
+                <div style="text-align: center;">
+                    <input type="checkbox" name="rating" id="star5" value="5" style="display: none;">
+                    <label class="stars" for="star5" onclick="toggleStar(5)">&#9733;</label>
+                    <input type="checkbox" name="rating" id="star4" value="4" style="display: none;">
+                    <label class="stars" for="star4" onclick="toggleStar(4)">&#9733;</label>
+                    <input type="checkbox" name="rating" id="star3" value="3" style="display: none;">
+                    <label class="stars" for="star3" onclick="toggleStar(3)">&#9733;</label>
+                    <input type="checkbox" name="rating" id="star2" value="2" style="display: none;">
+                    <label class="stars" for="star2" onclick="toggleStar(2)">&#9733;</label>
+                    <input type="checkbox" name="rating" id="star1" value="1" style="display: none;">
+                    <label class="stars" for="star1" onclick="toggleStar(1)">&#9733;</label>
+                </div>
+                <textarea name="avaliacao" id="feedbackText" style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; resize: none;" placeholder="Escreva aqui o seu feedback..."></textarea><br>
+                <input type="submit" value="Enviar avaliação" style="display: block; margin: 10px auto; padding: 10px 20px; background-color: #b1a646; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
             </form>
-        </section>
+        </div>
+        <script>
+            function toggleStar(starNumber) {
+                var checkbox = document.getElementById('star' + starNumber);
+                var star = document.querySelector('label[for="star' + starNumber + '"]');
+                
+                if (checkbox.checked) {
+                    checkbox.checked = false;
+                    star.style.color = '#ccc';
+                } else {
+                    checkbox.checked = true;
+                    star.style.color = '#ffd700';
+                }
+            }
+        </script>
+        <script>
+            document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Feedback enviado com sucesso!");
+                document.getElementById("feedbackText").value = "";
+            });
+        </script>
     </main>
     <footer>
         <p>BookWorms©</p>
