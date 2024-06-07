@@ -17,7 +17,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #fff;
+    background-color: #EEE9E5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@ main {
     left: -50%;
     width: 200%;
     height: 3rem;
-    background: white;
+    background: #EEE9E5;
     transform: translateY(-80%);
     z-index: -1;
 }
@@ -121,7 +121,7 @@ main {
 }
 
 .carousel-content {
-    background-color: #fff;
+    background-color: #EEE9E5;
     padding: 1rem;
     text-align: center;
     max-width: 600px;
@@ -157,7 +157,7 @@ main {
 
 .learn-more {
     background-color: #333;
-    color: #fff;
+    color: #EEE9E5;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -193,7 +193,7 @@ main {
 .feedback button {
     margin-top: 2rem;
     background-color: #333;
-    color: #fff;
+    color: #EEE9E5;
     width: 40%;
     max-width: 400px;
     border: none;
@@ -205,10 +205,10 @@ main {
 footer {
     margin-top: 3rem;
     width: 100%;
-    background-color: #fff;
+    background-color: #EEE9E5;
     padding: 1rem 2rem;
     text-align: left;
-    box-shadow: 0 50vh 0 50vh #fff;
+    box-shadow: 0 50vh 0 50vh #EEE9E5;
 }
 
 footer p {
